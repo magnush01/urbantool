@@ -18,50 +18,39 @@ const facilityTypes = {
         name: 'Bildung', 
         weight: 15, 
         minimum: 5, 
-        searchType: 'school'
+        searchType: ['school', 'university', 'college', 'library', 'kindergarten', 'preschool', 'academy', 'secondary_school', 'high_school', 'university', 'college', 'vocational_school', 'vocational_college', 'technical_school', 'technical_college', 'adult_education', 'language_school', 'music_school', 'art_school', 'dance_school', 'sports_school',]
     },
-    'food': { 
-        name: 'Gastronomie', 
-        weight: 10, 
-        minimum: 10, 
-        searchType: 'restaurant'
-    },
-    'shopping': { 
-        name: 'Einkaufen', 
+        'shopping': { 
+        name: 'Nahversorgung', 
         weight: 15, 
         minimum: 5, 
-        searchType: 'store'
+        searchType: ['store', 'supermarket', 'grocery_or_supermarket', 'convenience_store', 'supermarket', 'grocery_or_supermarket', 'convenience_store', 'supermarket', 'grocery_or_supermarket', 'convenience_store','drugstore', 'bakery', 'butcher', 'greengrocer', 'fishmonger', 'postoffice'] 
     },
     'recreation': { 
-        name: 'Erholung', 
+        name: 'Naherholung', 
         weight: 10, 
         minimum: 3, 
-        searchType: 'park'
+        searchType: ['park', 'fountain', 'lake', 'beach', 'forest', 'garden', ]
     },
     'transit': { 
-        name: 'ÖPNV', 
+        name: 'Mobilität', 
         weight: 15, 
         minimum: 5, 
-        searchType: ['transit_station', 'subway_station', 'train_station', 'bus_station']
+        searchType: ['transit_station', 'subway_station', 'train_station', 'bus_station', 'bus_stop', 'tram_station', 'ferry_terminal', 'bus_station', 'train_station', 'subway_station', 'tram_station','car-sharing', 'bike-sharing', 'bike-rental', 'car-rental', 'car-rental-station', 'car-sharing-station', 'bike-rental-station', 'car-sharing-terminal', 'bike-sharing-terminal']
     },
     'health': { 
         name: 'Gesundheit', 
         weight: 15, 
         minimum: 5, 
-        searchType: 'doctor'
+        searchType: ['doctor', 'clinic', 'pharmacy', 'hospital', 'dentist', 'physiotherapist', 'physiotherapy', 'physiotherapist_clinic', ]
     },
     'culture': { 
-        name: 'Kultur', 
+        name: 'Freizeit', 
         weight: 10, 
         minimum: 3, 
-        searchType: 'point_of_interest'
+        searchType: [ 'cinema', 'gym', 'bar', 'cafe', 'movie_theater', 'theater', 'art_gallery', 'museum', 'library', 'zoo', 'aquarium', 'park']  
     },
-    'sports': { 
-        name: 'Sport', 
-        weight: 10, 
-        minimum: 3, 
-        searchType: 'gym'
-    }
+
 };
 
 // Aktualisierte obsoleteTypes mit den neuen Nutzungskategorien
@@ -94,7 +83,7 @@ const obsoleteTypes = {
     'cinema': { 
         name: 'Kino', 
         searchType: 'movie_theater',
-        weight: 10
+        weight: 41
     },
     'manufacturing': { 
         name: 'Produzierendes Gewerbe', 
@@ -129,7 +118,7 @@ const obsoleteTypes = {
     'parking': { 
         name: 'Parkplatz', 
         searchType: 'parking',
-        weight: 15
+        weight: 14
     },
     'airport': { 
         name: 'Flughafen', 
@@ -156,11 +145,7 @@ const obsoleteTypes = {
         searchType: 'industrial',
         weight: 25
     },
-    'harbor': { 
-        name: 'Hafenlogistik', 
-        searchType: 'harbor',
-        weight: 25
-    }
+
 };
 
 // Aktualisierte initMap Funktion
